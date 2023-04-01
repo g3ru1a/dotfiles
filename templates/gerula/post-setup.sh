@@ -25,5 +25,5 @@ sed -i "s/<user>/$username/" ~/.profile
 sed -i "s/<user>/$username/" ~/.zshenv
 
 sudo rm -rf /usr/share/X11/xkb/symbols/pc
-sudo cp "$dir"/scritps/usr-share-X11-xkb-symbols-pc /usr/share/X11/xkb/symbols/
+sudo cp "$dir"/scripts/usr-share-X11-xkb-symbols-pc /usr/share/X11/xkb/symbols/
 sudo mv /usr/share/X11/xkb/symbols/usr-share-X11-xkb-symbols-pc /usr/share/X11/xkb/symbols/pc
