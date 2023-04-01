@@ -20,14 +20,14 @@ yay -S antigen starship polybar lsd fasd github-cli \
       xorg-xmodmap ripgrep polkit-gnome mpv picom flameshot \
       dunst mailspring cava kitty yadm ttf-icomoon-feather \
       noto-fonts noto-fonts-emoji noto-fonts-extra \
-      ttf-noto-nerd rofi twitch-cli
+      ttf-noto-nerd rofi twitch-cli-git
 retval=$?
 if [ $retval -eq 0 ];then
   echo "Successfully installed dependencies"
 else
   echo "Something went wrong."
   exit
-fi 
+fi
 
 title="Available Setups"
 prompt="Pick an option: "
