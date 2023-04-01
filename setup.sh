@@ -15,12 +15,12 @@ read -p "What's your account user name? [user]: " username
 echo "Preparing BSPWM for $username"
 
 echo "Installing dependencies..."
-#yay -S antigen starship polybar lsd fasd github-cli \
-#      bspwm sxhkd xorg-xev xorg-utils xdo xorg-xrandr \
-#      xorg-xmodmap ripgrep polkit-gnome mpv picom flameshot \
-#      dunst mailspring cava kitty yadm ttf-icomoon-feather \
-#      noto-fonts noto-fonts-emoji noto-fonts-extra \
-#      ttf-noto-nerd rofi twitch-cli
+yay -S antigen starship polybar lsd fasd github-cli \
+      bspwm sxhkd xorg-xev xorg-utils xdo xorg-xrandr \
+      xorg-xmodmap ripgrep polkit-gnome mpv picom flameshot \
+      dunst mailspring cava kitty yadm ttf-icomoon-feather \
+      noto-fonts noto-fonts-emoji noto-fonts-extra \
+      ttf-noto-nerd rofi twitch-cli
 
 title="Available Setups"
 prompt="Pick an option: "
