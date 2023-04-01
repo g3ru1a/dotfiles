@@ -13,10 +13,6 @@ if [ "$response" == "n" ] || [ "$response" == "N" ]; then
     makepkg -si
 fi
 
-read -p "What's your account user name? [user]: " username
-
-echo "Preparing BSPWM for $username"
-
 echo "Installing dependencies..."
 yay -S antigen starship polybar lsd fasd github-cli \
       bspwm sxhkd xorg-xev xdo xorg-xrandr \
@@ -31,6 +27,10 @@ else
   echo "Something went wrong."
   exit
 fi
+
+read -p "What's your account user name? [user]: " username
+
+echo "Preparing BSPWM for $username"
 
 title="Available Setups"
 prompt="Pick an option: "
