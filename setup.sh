@@ -21,20 +21,31 @@ yay -S antigen starship polybar lsd fasd github-cli \
       dunst mailspring cava kitty yadm ttf-icomoon-feather \
       noto-fonts noto-fonts-emoji noto-fonts-extra \
       ttf-noto-nerd rofi twitch-cli
+retval=$?
+if [ $retval -eq 0 ];then
+  echo "Successfully installed dependencies"
+else
+  echo "Something went wrong."
+  exit
+fi 
 
 title="Available Setups"
 prompt="Pick an option: "
 options=("saghen" "gerula")
-selection="saghen"
+selection="exit"
 echo "$title"
 PS3="$prompt "
 select opt in "${options[@]}" "Quit"; do
     case "$REPLY" in
     [1-2]) selection=$opt; break;;
-    $((${#options[@]}+1))) echo "Goodbye!"; break;;
+    $((${#options[@]}+1))) echo "Goodbye!"; exit;;
     *) echo "Invalid option. Try another one.";continue;;
     esac
 done
+
+if [ "$selection" == "exit" ]; then
+  exit;
+fi
 
 template="templates/$selection"
 echo "Looking for $template"
