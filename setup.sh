@@ -1,7 +1,7 @@
 #! /bin/bash
 # shellcheck disable=SC2162
 echo "Running pacman update"
-pacman -Syu
+sudo pacman -Syu
 
 read -p "Do you have 'yay' already installed? [Y/n]: " response
 
@@ -55,7 +55,7 @@ echo "Looking for $template"
 if [ -f "$template"/post-setup.sh ]; then
   echo "Loading $template..."
   sudo chmod +x ./"$template"/post-setup.sh
-  sudo ./"$template"/post-setup.sh username
+  ./"$template"/post-setup.sh username
 else
   echo "Template not found. Aborting."
   exit
