@@ -1,5 +1,8 @@
 #! /bin/bash
 # shellcheck disable=SC2162
+echo "Running pacman update"
+pacman -Syu
+
 read -p "Do you have 'yay' already installed? [Y/n]: " response
 
 if [ "$response" == "n" ] || [ "$response" == "N" ]; then
@@ -16,7 +19,7 @@ echo "Preparing BSPWM for $username"
 
 echo "Installing dependencies..."
 yay -S antigen starship polybar lsd fasd github-cli \
-      bspwm sxhkd xorg-xev xorg-utils xdo xorg-xrandr \
+      bspwm sxhkd xorg-xev xdo xorg-xrandr \
       xorg-xmodmap ripgrep polkit-gnome mpv picom flameshot \
       dunst mailspring cava kitty yadm ttf-icomoon-feather \
       noto-fonts noto-fonts-emoji noto-fonts-extra \
