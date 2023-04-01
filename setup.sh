@@ -37,11 +37,11 @@ select opt in "${options[@]}" "Quit"; do
 done
 
 template="templates/$selection"
-
+echo "Looking for $template"
 if [ -f "$template"/post-setup.sh ]; then
   echo "Loading $template..."
   sudo chmod +x ./"$template"/post-setup.sh
-  ./"$template"/post-setup.sh username
+  sudo ./"$template"/post-setup.sh username
 else
   echo "Template not found. Aborting."
   exit

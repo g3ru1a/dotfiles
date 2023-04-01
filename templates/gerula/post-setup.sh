@@ -1,23 +1,25 @@
 #! /bin/bash
 
 username=$1
+dir="$PWD/templates/gerula"
+echo "$PWD"
 
 echo "Configuring the environment..."
 
-cp -r ./.config/bspwm ~/.config/bspwm
-cp -r ./.config/dunst ~/.config/dunst
-cp -r ./.config/kitty ~/.config/kitty
-cp -r ./.config/picom ~/.config/picom
-cp -r ./.config/polybar ~/.config/polybar
-cp -r ./.config/rofi ~/.config/rofi
-cp -r ./.config/sxhkd ~/.config/sxhkd
+cp -r "$dir"/.config/bspwm ~/.config/bspwm
+cp -r "$dir"/.config/dunst ~/.config/dunst
+cp -r "$dir"/.config/kitty ~/.config/kitty
+cp -r "$dir"/.config/picom ~/.config/picom
+cp -r "$dir"/.config/polybar ~/.config/polybar
+cp -r "$dir"/.config/rofi ~/.config/rofi
+cp -r "$dir"/.config/sxhkd ~/.config/sxhkd
 
-cp -r ./scripts ~/
-cp -r ./styling ~/
-cp -r ./.fonts ~/
-cp .profile ~/
-cp .zshenv ~/
-cp .zshrc ~/
+cp -r "$dir"/scripts ~/
+cp -r "$dir"/styling ~/
+cp -r "$dir"/.fonts ~/
+cp "$dir"/.profile ~/
+cp "$dir"/.zshenv ~/
+cp "$dir"/.zshrc ~/
 
 sed -i "s/<user>/$username/" ~/.profile
 sed -i "s/<user>/$username/" ~/.zshenv
