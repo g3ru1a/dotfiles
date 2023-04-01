@@ -33,6 +33,11 @@ echo "Updating profile name"
 sed -i "s/<user>/$username/" /home/"$username"/.profile
 sed -i "s/<user>/$username/" /home/"$username"/.zshenv
 
+xrandr --listactivemonitors
+# shellcheck disable=SC2162
+read -p "Specify main monitor [eg. HDMI-1]: " monitor
+sed -i "s/<main-monitor>/$monitor" /home/"$username"/.profile
+
 echo "Updating X11 xkb symbols"
 sudo rm -rf /usr/share/X11/xkb/symbols/pc
 sudo cp "$dir"/scripts/usr-share-X11-xkb-symbols-pc /usr/share/X11/xkb/symbols/
