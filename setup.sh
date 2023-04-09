@@ -19,10 +19,19 @@ yay -S antigen starship polybar lsd fasd github-cli \
       xorg-xmodmap ripgrep polkit-gnome mpv picom flameshot \
       dunst mailspring cava kitty yadm ttf-icomoon-feather \
       noto-fonts noto-fonts-emoji noto-fonts-extra \
-      ttf-noto-nerd rofi twitch-cli-git
+      ttf-noto-nerd rofi twitch-cli-git jq
 retval=$?
 if [ $retval -eq 0 ];then
-  echo "Successfully installed dependencies"
+  echo "Successfully installed yay dependencies"
+else
+  echo "Something went wrong."
+  exit
+fi
+
+sudo pacman -S feh playerctl
+retval=$?
+if [ $retval -eq 0 ];then
+  echo "Successfully installed pacman dependencies"
 else
   echo "Something went wrong."
   exit
