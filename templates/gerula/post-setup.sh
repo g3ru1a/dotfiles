@@ -38,6 +38,10 @@ xrandr --listactivemonitors
 read -p "Specify main monitor [eg. HDMI-1]: " monitor
 sed -i "s/<main-monitor>/$monitor/" /home/"$username"/.profile
 
+#Copy zsh theme
+cp "$dir"/.config/starship.toml /home/"$username"/.config/starship.toml
+chsh -s $(which zsh)
+
 echo "Updating X11 xkb symbols"
 sudo rm -rf /usr/share/X11/xkb/symbols/pc
 sudo cp "$dir"/scripts/usr-share-X11-xkb-symbols-pc /usr/share/X11/xkb/symbols/
