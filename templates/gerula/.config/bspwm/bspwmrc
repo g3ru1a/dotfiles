@@ -101,7 +101,7 @@ xmodmap ~/scripts/x11-keymap
 sxhkd &
 
 # Compsitor
-#picom &
+picom &
 
 # Autostart applications
 # bspswallow & # Automatically swallow terminals when they launch a UI
