@@ -40,7 +40,7 @@ sed -i "s/<main-monitor>/$monitor/" /home/"$username"/.profile
 
 #Copy zsh theme
 cp "$dir"/.config/starship.toml /home/"$username"/.config/starship.toml
-chsh -s $(which zsh)
+chsh -s /bin/zsh
 
 echo "Updating X11 xkb symbols"
 sudo rm -rf /usr/share/X11/xkb/symbols/pc
