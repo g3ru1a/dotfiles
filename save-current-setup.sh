@@ -25,7 +25,6 @@ echo "Looking for $template"
 if [ -f "$template"/post-setup.sh ]; then
   echo "Preparing to backup your current configuration..."
 
-  username=$1
   dir="$PWD/templates/$selection"
 
   echo "Configuring the environment..."
@@ -65,10 +64,8 @@ if [ -f "$template"/post-setup.sh ]; then
 
   xrandr --listactivemonitors
   # shellcheck disable=SC2162
-  read -p "Removing main monitor [eg. HDMI-1]: " monitor
+  read -p "Specify your monitor choice [eg. HDMI-1]: " monitor
   sed -i "s/$monitor/<main-monitor>/" "$dir"/.profile
-
-
 
   echo "Copying X11 xkb symbols"
   sudo cp /usr/share/X11/xkb/symbols/pc "$dir"/scripts/usr-share-X11-xkb-symbols-pc

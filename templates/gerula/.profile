@@ -1,5 +1,6 @@
 export STEAM_FRAME_FORCE_CLOSE=1
 export PATH="$HOME/.cargo/env:$HOME/.local/bin:$HOME/scripts/bin:$PATH"
+export PATH="$PATH:/home/<user>/Documents/WebStorm/bin"
 export DISPLAY1=<main-monitor>
 #export DISPLAY2=DP-2
 export WLR_RENDERER=vulkan
