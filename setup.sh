@@ -69,7 +69,3 @@ else
   echo "Template not found. Aborting."
   exit
 fi
-
-echo "Copying files"
-
-echo "Hello Baby!"
