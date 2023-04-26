@@ -2,6 +2,8 @@
 
 source ~/.profile
 
+xrandr --output HDMI-0 --rate 119.88 --mode 3840x2160
+
 # Windows like repeating speed
 xset r rate 240 40
 
@@ -103,7 +105,7 @@ xmodmap ~/scripts/x11-keymap
 sxhkd &
 
 # Compsitor
-picom &
+#picom &
 
 # Autostart applications
 # bspswallow & # Automatically swallow terminals when they launch a UI

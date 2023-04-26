@@ -2,6 +2,12 @@
 # wm independent hotkeys
 #
 
+#go to prev/next monitor
+super + ctrl + Left
+  bspc desktop -f prev
+super + ctrl + Right
+  bspc desktop -f next
+
 #open phpstorm window layout
 super + shift + alt + p
   psdev.sh /home/gerula/Projects/mangadb-api
@@ -141,7 +147,7 @@ super + {_,shift + ,alt + }{h,j,k,l}
 
 # focus the next/previous window in the current desktop
 super + {c,v}
-	bspc node -f {next,prev}.local.!hidden.window
+  bspc node -f {prev,next}.local.!hidden.window
 
 # focus/send to the given desktop
 super + {_,shift + }{1-9,0}
@@ -152,8 +158,8 @@ super + {_,shift + }{1-9,0}
 #	bspc {monitor -f,node -m} next --follow
 
 # send node to last local desktop and follow
-super + ctrl + a
-	bspc node -d last.local --follow
+#super + ctrl + a
+#	bspc node -d last.local --follow
 
 # swap with other monitor
 #super + s
