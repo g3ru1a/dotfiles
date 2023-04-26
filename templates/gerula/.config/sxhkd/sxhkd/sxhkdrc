@@ -2,6 +2,14 @@
 # wm independent hotkeys
 #
 
+#open phpstorm window layout
+super + shift + alt + p
+  psdev.sh /home/gerula/Projects/mangadb-api
+
+#open webstorm window layout
+super + shift + alt + w
+  wsdev.sh /home/gerula/Projects/mangadb-ui
+
 # terminal
 super + Return
   term
@@ -94,8 +102,8 @@ super + f
 super + shift + f
   bspc node -t \~fullscreen
 
-super + shift + s
-  bspc node -g sticky
+#super + shift + s
+#  bspc node -g sticky
 
 # alternate between the tiled and monocle layout
 super + m
@@ -140,20 +148,20 @@ super + {_,shift + }{1-9,0}
   ~/scripts/bspwm/select-local-desktop.sh "{desktop -f,node -d}" {1-9,10} --follow
 
 # focus/send to other monitor and follow
-super + {q,a}
-	bspc {monitor -f,node -m} next --follow
+#super + {q,a}
+#	bspc {monitor -f,node -m} next --follow
 
 # send node to last local desktop and follow
 super + ctrl + a
 	bspc node -d last.local --follow
 
 # swap with other monitor
-super + s
-	bspc desktop focused -s any.active.\!local
+#super + s
+#	bspc desktop focused -s any.active.\!local
 
 # reset swapped desktops
-super + shift + s
-  node ~/scripts/bspwm/reset-desktops.js $DISPLAY1 $DISPLAY2
+#super + shift + s
+#  node ~/scripts/bspwm/reset-desktops.js $DISPLAY1 $DISPLAY2
 
 # return focus to last node
 super + r
